@@ -1,5 +1,6 @@
 let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, isPrems })  => {
-const caption =`
+    const vn = './media/استغفر الله';
+    const caption =`
 
 
 *༺❁━━═════⊱𓆩☁️𓆪⊰═════━━❁༻*
@@ -28,9 +29,7 @@ const caption =`
 *✠ ~تــ✍︎ــوقــيــع ↯:~*
 *『𝐂𝐋𝐎𝐔𝐃𓆩☁️𓆪𝐊𝐈𝐍𝐆𝐃𝐎𝐌』*`
 
-if (command == 'اوامر') {
-    const vn = './media/استغفر الله';
-}
+
 await conn.sendMessage( m.chat, {
         video: {
           url: 'https://telegra.ph/file/a2a1de6434ce22177b26b.mp4'
