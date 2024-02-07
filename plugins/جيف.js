@@ -11,8 +11,8 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     }
     await conn.sendFile(m.chat, out, 'out.gif', 'nih', m, 0, { mimetype: 'video/gif', thumbnail: Buffer.alloc(0) })
 }
-handler.help = ['tourl <reply image>']
-handler.tags = ['sticker']
+handler.help = ['togif']
+handler.tags = ['tools']
 handler.command = ['جيف']
 
 handler.limit = true
