@@ -10,7 +10,7 @@ function handler(m, { groupMetadata }) {
     })
 }
 if (command == 'خروف') {
-    const vn = './media/استغفر الله';
+    const vn = './media/استغفر الله';}
 handler.help = ['ship']
 handler.tags = ['fun']
 handler.command = ['خروف']
