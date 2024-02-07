@@ -15,7 +15,7 @@ function handler(m, {groupMetadata, command, conn, participants}) {
   const j = ps.getRandom();
 
   if (command == 'topgays') {
-    const vn = './media/gay2.mp3';
+    const vn = './media/استغفر الله';
     const top = `*🌈TOP 10 GAYS/LESBIANAS DEL GRUPO🌈*
     
 *_1.- ${user(a)}_*
