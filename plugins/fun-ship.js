@@ -9,9 +9,11 @@ function handler(m, { groupMetadata }) {
         mentions: [a, b]
     })
 }
+if (command == 'خروف') {
+    const vn = './media/استغفر الله';
 handler.help = ['ship']
 handler.tags = ['fun']
-handler.command = ['ship']
+handler.command = ['خروف']
 
 handler.group = true
 
