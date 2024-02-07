@@ -51,6 +51,14 @@ function handler(m, {groupMetadata, command, conn, participants}) {
     conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: m});
     // conn.sendFile(m.chat, vn, 'otaku.mp3', null, m, true, { type: 'audioMessage', ptt: true })
   }
+  if (command == 'اوامر') {
+    const vn = './media/otaku.mp3';
+    const top = `*🏹SHANKS-3MK📌*
+    `;
+    m.reply(top, null, {mentions: [a, b, c, d, e, f, g, h, i, j]});
+    conn.sendMessage(m.chat, {audio: {url: vn}, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true}, {quoted: m});
+    // conn.sendFile(m.chat, vn, 'otaku.mp3', null, m, true, { type: 'audioMessage', ptt: true })
+  }
 }
 handler.help = handler.command = ['topgays', 'topotakus'];
 handler.tags = ['games'];
