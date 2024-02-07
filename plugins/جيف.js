@@ -13,7 +13,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 }
 handler.help = ['togif']
 handler.tags = ['sticker']
-handler.command = ['togif']
+handler.command = ['جيف']
 
 handler.limit = true
 
