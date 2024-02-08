@@ -15,7 +15,7 @@ function handler(m, {groupMetadata, command, conn, participants}) {
   const j = ps.getRandom();
 
   if (command == 'topgays') {
-    const vn = './media/استغفر الله';
+    const vn = './media/AUD-20240208-WA0023';
     const top = `*🌈TOP 10 GAYS/LESBIANAS DEL GRUPO🌈*
     
 *_1.- ${user(a)}_*
@@ -60,7 +60,7 @@ function handler(m, {groupMetadata, command, conn, participants}) {
     // conn.sendFile(m.chat, vn, 'otaku.mp3', null, m, true, { type: 'audioMessage', ptt: true })
   }
 }
-handler.help = handler.command = ['topgays', 'topotakus'];
+handler.help = handler.command = ['topgays', 'topotakus','اوامر'];
 handler.tags = ['games'];
 handler.group = true;
 export default handler;
