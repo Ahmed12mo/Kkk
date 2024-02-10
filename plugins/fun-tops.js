@@ -60,7 +60,7 @@ function handler(m, {groupMetadata, command, conn, participants}) {
     // conn.sendFile(m.chat, vn, 'otaku.mp3', null, m, true, { type: 'audioMessage', ptt: true })
   }
 }
-handler.help = handler.command = ['topgays', 'topotakus','اوامر'];
+handler.help = handler.command = ['topgays', 'topotakus',''];
 handler.tags = ['games'];
 handler.group = true;
 export default handler;
