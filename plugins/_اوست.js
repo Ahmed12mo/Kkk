@@ -1,31 +1,39 @@
-let timeout = 60000
-let poin = 500
-let handler = async (m, { conn, command, usedPrefix }) => {
-    conn.tebakbendera = conn.tebakbendera ? conn.tebakbendera : {}
-    let id = m.chat
-    if (id in conn.tebakbendera) {
-        conn.reply(m.chat, '❐┃لم يتم الاجابة علي السؤال بعد┃❌ ❯', conn.tebakbendera[id][0])
-        throw false
-    }
-    let src = await (await fetch('https://gist.githubusercontent.com/Kyutaka101/98d564d49cbf9b539fee19f744de7b26/raw/f2a3e68bbcdd2b06f9dbd5f30d70b9fda42fec14/guessflag')).json()
-  let json = src[Math.floor(Math.random() * src.length)]
-    let caption = `*${command.toUpperCase()}*
-  ❐↞┇الـوقـت⏳↞ *${(timeout / 1000).toFixed(2)} ┇
-  *استخدم .انسحب للأنسحاب*
-  ❐↞┇الـجـائـزة💰↞ ${poin} نقاط┇
-『𝐂𝐋𝐎𝐔𝐃𓆩☁️𓆪𝐊𝐈𝐍𝐆𝐃𝐎𝐌』
-     `.trim()
-    conn.tebakbendera[id] = [
-        await conn.sendFile(m.chat, json.img, '', caption, m),
-        json, poin,
-        setTimeout(() => {
-            if (conn.tebakbendera[id]) conn.reply(m.chat, `❮ ⌛┇انتهي الوقت┇⌛❯\n❐↞┇الاجـابـة✅↞ ${json.name}*┇`, conn.tebakbendera[id][0])
-            delete conn.tebakbendera[id]
-        }, timeout)
-    ]
-}
-handler.help = ['guessflag']
-handler.tags = ['game']
-handler.command = /^اوست/i
+const { Client, MessageMedia } = require('whatsapp-web.js');
+const fs = require('fs');
 
-export default handler
+const client = new Client();
+const mediaFolder = './media/';
+
+client.on('qr', qr => {
+    console.log('QR RECEIVED', qr);
+});
+
+client.on('ready', () => {
+    console.log('Client is ready!');
+});
+
+client.on('message', async msg => {
+    const { body } = msg;
+    
+    // قائمة الكلمات المفتاحية والملفات الصوتية المرتبطة بها
+    const audioFiles = {
+        'دز': 'welcome.mp3',
+        'منور': 'agree.mp3',
+        'خرا': 'thanks.mp3'
+        // يمكنك إضافة المزيد هنا حسب الحاجة
+    };
+    
+    // التحقق مما إذا كانت الرسالة تحتوي على كلمة مفتاحية
+    if (body.toLowerCase() in audioFiles) {
+        const audioFileName = audioFiles[body.toLowerCase()];
+        const audioPath = mediaFolder + audioFileName;
+        
+        if (fs.existsSync(audioPath)) {
+            // إرسال رسالة صوتية
+            const media = MessageMedia.fromFilePath(audioPath);
+            await client.sendMessage(msg.from, media, { sendAudioAsVoice: true });
+        }
+    }
+});
+
+client.initialize();
