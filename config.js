@@ -50,12 +50,12 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.botname = 'ᴛʜᴇ ɢᴜʀᴜ-ʙᴏᴛ'
+global.botname = '𝐒𝐇𝐀𝐍𝐊𝐒'
 global.premium = 'true'
-global.packname = 'GURU┃ᴮᴼᵀ' 
-global.author = '@Asliguru' 
+global.packname = '𝐒𝐇𝐀𝐍𝐊𝐒💛💫=+212677519428' 
+global.author = '𝐒𝐇𝐀𝐍𝐊𝐒💛💫' 
 global.menuvid = 'https://i.imgur.com/AjDzGgG.mp4'
-global.igfg = '▢ Follow on Instagram\n\n' 
+global.igfg = '▢ Follow on Instagram\n\nhttps://www.instagram.com/shanks__an?igsh=MWFmc2dmdTllaTE1NA==' 
 global.dygp = ''
 global.fgsc = 'https://github.com/Guru322/GURU-BOT' 
 global.fgyt = 'https://youtube.com/@Asliguru'
@@ -64,7 +64,7 @@ global.fglog = 'https://raw.githubusercontent.com/Guru322/api/Guru/guru.jpg'
 global.thumb = fs.readFileSync('./Assets/Gurulogo.jpg')
 
 
-global.wait = '*⌛ _Charging..._*\n*▰▰▰▱▱▱▱▱*'
+global.wait = '*⌛ _Charging..._*\n*ادعم صاحب البوت بمتابعة على صفحته:{ https://www.instagram.com/shanks__an?igsh=MWFmc2dmdTllaTE1NA== }*'
 global.rwait = '⌛'
 global.dmoji = '🤭'
 global.done = '✅'
