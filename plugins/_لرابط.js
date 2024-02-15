@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 let handler = async (m, { conn, args, text }) => {
   if (!text) throw '*Please provide a URL or link to shorten.*';
 
-  let shortUrl1 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text();
+  let shortUrl1 = await (await fetch(`https://2shared.com/api-create.php?url=${args[0]}`)).text();
   
   if (!shortUrl1) throw `*Error: Could not generate a short URL.*`;
 
