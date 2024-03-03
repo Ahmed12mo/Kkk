@@ -40,5 +40,5 @@ await conn.sendMessage( m.chat, {
 
 handler.help = ['allmenu']
 handler.tags = ['main']
-handler.command = ['اوامر'] 
+handler.command = ['المطور'] 
 export default handler
