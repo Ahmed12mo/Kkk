@@ -64,6 +64,17 @@ let str = `
 ┃ 📚  *Total Users:* ${totaluser} 
 ┗━━━━━━━━━━━━━┛
 
+*· · • • • • ✦ • • • • · ·*
+*₪↲ معلومات المطور ┆⥌❄️⥍*
+*⌬ ❛╏𝑺𝑨𝑳𝑨𝑯╏❛ ⌬* *اسم المطور*
+
+*⌬ ❛╏𝑻𝑶𝑵𝒀𝒀 𝑺𝑻𝑨𝑹𝑲╏❛ ⌬* *لقب المطور* 
+
+*⌬ ❛╏https://wa.me/+212677519428╏❛ ⌬* ‬‏*رقم المطور
+
+*⌬ ❛╏ ⌬* *جروب المطور*
+
+*⌬ ❛╏ ⌬* *جروب دعم المطور*
 💡 *_Remember, when in doubt, use ${usedPrefix}list or ${usedPrefix}help2. It's like my magic spell book!_* 💡
 `
 
@@ -74,7 +85,7 @@ let str = `
 }
 handler.help = ['main']
 handler.tags = ['group']
-handler.command = ['menu2', 'help2'] 
+handler.command = ['المطور', 'مطور'] 
 
 export default handler
 function clockString(ms) {
