@@ -222,5 +222,5 @@ await conn.sendMessage( m.chat, {
 
 handler.help = ['allmenu']
 handler.tags = ['main']
-handler.command = ['اوامر'] 
+handler.command = ['menu'] 
 export default handler
