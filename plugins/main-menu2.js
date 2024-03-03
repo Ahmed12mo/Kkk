@@ -77,7 +77,16 @@ let str = `
 *⌬ ❛╏ ⌬* *جروب دعم المطور*
 💡 *_Remember, when in doubt, use ${usedPrefix}list or ${usedPrefix}help2. It's like my magic spell book!_* 💡
 `
-
+await conn.sendMessage( m.chat, {
+        video: {
+          url: 'https://telegra.ph/file/a2a1de6434ce22177b26b.mp4'
+        },
+        caption: caption,
+        gifPlayback: true,
+        gifAttribution: Math.floor( Math.random( ) * 2 ) + 1
+      }, {
+        quoted: m
+      } );
 
     conn.sendFile(m.chat, pp, 'perfil.jpg', str, m, null, rpyt)
     m.react(done)
