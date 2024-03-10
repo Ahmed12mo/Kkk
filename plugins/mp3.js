@@ -8,7 +8,7 @@ let handler = async (m, { conn, command, usedPrefix }) => {
         throw false
     }
     let src = await (await fetch('https://gist.githubusercontent.com/Kyutaka101/fb0407ea580df29f483a084292246df1/raw/04c8fae9663f2a0d9a1e0a71824d9ce18ea423b4/gistfile1.txt')).json()
-  let json = src[Math.floor(Math.random() * src.length)]
+    let json = src[Math.floor(Math.random() * src.length)]
     let caption = `*${command.toUpperCase()}*
   ❐↞┇الـوقـت⏳↞ *${(timeout / 1000).toFixed(2)} ┇
   *استخدم .انسحب للأنسحاب*
@@ -16,7 +16,7 @@ let handler = async (m, { conn, command, usedPrefix }) => {
 『𝐓𝐎𝐍𝐘-𝘽𝙊𝙏』
      `.trim()
     conn.tebakbendera[id] = [
-        await conn.sendFile(m.chat, json.img, '', caption, m),
+        await conn.sendFile(m.chat, json.audio, '', caption, m, false, { mimetype: 'audio/mp4' }), // تغيير هنا
         json, poin,
         setTimeout(() => {
             if (conn.tebakbendera[id]) conn.reply(m.chat, `❮ ⌛┇انتهي الوقت┇⌛❯\n❐↞┇الاجـابـة✅↞ ${json.name}*┇`, conn.tebakbendera[id][0])
@@ -29,3 +29,4 @@ handler.tags = ['game']
 handler.command = /^اوست/i
 
 export default handler
+                                                  
